@@ -10,7 +10,7 @@ import {
 
 import { db } from "../firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
-import { useNavigate } from "react-router-dom";
+/* import { useNavigate } from "react-router-dom"; */
 import { toast } from "react-toastify";
  export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
@@ -20,7 +20,7 @@ import { toast } from "react-toastify";
     password: "",
   });
   const {name,email, password} = FormData;
-  const navigate = useNavigate();
+ /*  const navigate = useNavigate(); */
   function onChange(e){
     setFormData((prevState)=>({
       ...prevState,
