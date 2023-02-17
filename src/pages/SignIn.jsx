@@ -81,7 +81,7 @@ export default function SignIn() {
               <p className="mb-6">
                 Don't have a account?
                 <Link
-                  to="/SignIn"
+                  to="/SignUp"
                   className="text-red-600 hover:text-red-700 transition duration-200 ease-in-out ml-1"
                 >
                   Register
