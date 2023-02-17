@@ -10,7 +10,7 @@ import {
 
 import { db } from "../firebase";
 import { doc, serverTimestamp, setDoc } from "firebase/firestore";
-/* import { useNavigate } from "react-router-dom"; */
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
  export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false)
@@ -20,7 +20,7 @@ import { toast } from "react-toastify";
     password: "",
   });
   const {name,email, password} = FormData;
- /*  const navigate = useNavigate(); */
+  const navigate = useNavigate();
   function onChange(e){
     setFormData((prevState)=>({
       ...prevState,
@@ -48,8 +48,8 @@ import { toast } from "react-toastify";
       formDataCopy.timestamp = serverTimestamp();
 
       await setDoc(doc(db, "users", user.uid), formDataCopy);
-     /*   toast.success("Sign up was successful");
-     navigate("/"); */
+     /*   toast.success("Sign up was successful");*/
+     navigate("/"); 
     } catch (error) {
       toast.error("Something went wrong with the registration.Please try again");
     }
